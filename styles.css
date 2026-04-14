@@ -1,0 +1,516 @@
+/* styles.css - Vintage cálido + Moderno (iPhone 14 al 17) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fdf8ed;  /* base cálida tipo papel añejo */
+  color: #2c2418;
+  scroll-behavior: smooth;
+}
+
+/* Paleta vintage: crema, terracota, mostaza, oliva */
+:root {
+  --warm-bg: #faf1e0;
+  --card-bg: #fff7ef;
+  --accent-terracota: #c86a4b;
+  --accent-mostaza: #e0a82b;
+  --accent-oliva: #8b7a5b;
+  --text-dark: #3e2f24;
+  --border-warm: #e2d4c0;
+  --shadow-warm: 0 20px 35px -12px rgba(80, 50, 20, 0.15);
+}
+
+/* Navegación estilo retro suave */
+.warm-nav {
+  background: rgba(250, 241, 224, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #e9daca;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #b45f3b;
+}
+
+.logo i {
+  font-size: 1.8rem;
+  color: #d48c5b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #5e4b38;
+  transition: 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.nav-links a:hover {
+  color: #c86a4b;
+  border-bottom: 2px solid #e0a82b;
+  padding-bottom: 4px;
+}
+
+.cart-warm {
+  background: #e9dbc9;
+  padding: 0.5rem 1.2rem;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #8b5a3c;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-warm i {
+  font-size: 1.2rem;
+  color: #25d366;
+}
+
+.cart-warm:hover {
+  background: #ddcdb5;
+  transform: scale(0.97);
+}
+
+/* Hero cálido */
+.hero-warm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6%;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: linear-gradient(145deg, #fdf3e3 0%, #f7ecda 100%);
+}
+
+.hero-content-warm {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-tag {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  background: #e9daca;
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: #b1623a;
+  margin-bottom: 1rem;
+}
+
+.hero-content-warm h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #4b3621;
+}
+
+.warm-gradient {
+  background: linear-gradient(135deg, #c86a4b, #e0a82b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-content-warm p {
+  font-size: 1.1rem;
+  color: #6a5a48;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.btn-warm, .btn-outline-warm {
+  background: #c86a4b;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 6px 14px rgba(200, 106, 75, 0.25);
+  margin-right: 1rem;
+}
+
+.btn-outline-warm {
+  background: transparent;
+  border: 2px solid #c86a4b;
+  color: #c86a4b;
+  box-shadow: none;
+}
+
+.btn-warm:hover {
+  background: #b2573a;
+  transform: translateY(-2px);
+}
+
+.btn-outline-warm:hover {
+  background: #f5e7dc;
+}
+
+/* Polaroid frame con video */
+.hero-media {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.polaroid-frame {
+  background: #fff8ef;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 28px;
+  box-shadow: var(--shadow-warm);
+  transform: rotate(1deg);
+  transition: transform 0.3s;
+  border: 1px solid #e9daca;
+}
+
+.polaroid-frame:hover {
+  transform: rotate(0deg);
+}
+
+.hero-video {
+  width: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 9/16;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.polaroid-caption {
+  text-align: center;
+  margin-top: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  color: #a97c5a;
+}
+
+/* Sección productos */
+.products-warm {
+  padding: 5rem 6%;
+  background: #fef9f0;
+}
+
+.section-header-warm {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b98662;
+}
+
+.section-header-warm h2 {
+  font-size: 2.6rem;
+  font-family: 'Playfair Display', serif;
+  margin-top: 0.5rem;
+  color: #3e2f24;
+}
+
+.warm-accent {
+  color: #c86a4b;
+  border-bottom: 3px solid #e0a82b;
+  display: inline-block;
+}
+
+.warm-divider {
+  width: 70px;
+  height: 3px;
+  background: #e0a82b;
+  margin: 1rem auto;
+  border-radius: 4px;
+}
+
+.products-grid-warm {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.product-card-warm {
+  background: var(--card-bg);
+  border-radius: 36px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  border: 1px solid var(--border-warm);
+  box-shadow: var(--shadow-warm);
+  cursor: pointer;
+}
+
+.product-card-warm:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 36px -12px rgba(80, 50, 20, 0.25);
+  border-color: #e0a82b;
+}
+
+.product-media {
+  position: relative;
+  background: #f1e7db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  min-height: 280px;
+}
+
+.product-img {
+  width: 160px;
+  transition: 0.2s;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.1));
+}
+
+.product-video-thumb {
+  width: 180px;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #3c2a1f;
+}
+
+.product-sub {
+  color: #a77b56;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #c86a4b;
+  margin: 0.5rem 0;
+}
+
+.whatsapp-buy-btn {
+  background: #25d366;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 60px;
+  font-weight: 600;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+
+.whatsapp-buy-btn:hover {
+  background: #128c7e;
+  transform: scale(1.02);
+}
+
+/* Tabla de especificaciones vintage */
+.specs-warm {
+  padding: 4rem 6%;
+  background: #f7efe2;
+}
+
+.specs-table-container {
+  overflow-x: auto;
+  background: #fffcf5;
+  border-radius: 40px;
+  padding: 1rem;
+  box-shadow: var(--shadow-warm);
+  border: 1px solid #e2cfb5;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+}
+
+.specs-table th {
+  background: #e9daca;
+  color: #4d3522;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.specs-table td {
+  padding: 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid #eedfcb;
+  color: #4f3f30;
+}
+
+.specs-table tr:hover {
+  background: #fcf4e8;
+}
+
+/* Contacto WhatsApp */
+.contact-warm {
+  padding: 4rem 6%;
+  background: #fff5e9;
+}
+
+.contact-card-warm {
+  background: #ffffffd9;
+  backdrop-filter: blur(4px);
+  border-radius: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2.5rem;
+  border: 1px solid #ebdac8;
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+}
+
+.contact-info-warm {
+  flex: 2;
+}
+
+.contact-info-warm i {
+  font-size: 2.5rem;
+  color: #c86a4b;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-warm h3 {
+  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  color: #3a2c20;
+}
+
+.whatsapp-btn-warm {
+  background: #25d366;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  margin-top: 1rem;
+  transition: 0.2s;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn-warm:hover {
+  background: #128c7e;
+  transform: scale(1.02);
+}
+
+.contact-img img {
+  filter: sepia(0.2);
+  transition: 0.2s;
+}
+
+/* Footer */
+.footer-warm {
+  text-align: center;
+  padding: 2rem;
+  background: #e9daca;
+  color: #6b573f;
+  font-size: 0.8rem;
+}
+
+/* Modal video */
+.modal-vintage {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 45, 30, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-vintage-content {
+  background: #fff9ef;
+  border-radius: 48px;
+  max-width: 700px;
+  width: 90%;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px solid #e0a82b;
+  position: relative;
+}
+
+.close-video {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #b45f3b;
+}
+
+/* Responsive */
+@media (max-width: 780px) {
+  .warm-nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero-content-warm h1 {
+    font-size: 2.2rem;
+  }
+  .contact-card-warm {
+    flex-direction: column;
+    text-align: center;
+  }
+  .specs-table th, .specs-table td {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+  .product-card-warm .product-media {
+    min-height: 220px;
+  }
+}

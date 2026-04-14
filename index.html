@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Vintage Apple Store | iPhones 14 al 17</title>
+  <!-- Google Fonts: tipografía cálida y legible -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (iconos modernos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header con navegación suave y glassmorphism en tonos cálidos -->
+  <nav class="warm-nav">
+    <div class="logo">
+      <i class="fab fa-apple"></i>
+      <span>Vintage Cellar</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link">Inicio</a></li>
+      <li><a href="#products" class="nav-link">Colección</a></li>
+      <li><a href="#specs" class="nav-link">Especificaciones</a></li>
+      <li><a href="#contact" class="nav-link">Contacto</a></li>
+    </ul>
+    <div class="cart-warm">
+      <i class="fab fa-whatsapp"></i>
+      <span>Compra directa</span>
+    </div>
+  </nav>
+
+  <!-- Sección Hero cálida y vintage-modern -->
+  <section id="hero" class="hero-warm">
+    <div class="hero-content-warm">
+      <div class="hero-tag">Desde 2014 creando experiencias</div>
+      <h1>iPhone <span class="warm-gradient">14 · 15 · 16 · 17</span></h1>
+      <p>Elegancia retro, tecnología de vanguardia. Cada dispositivo cuenta una historia.</p>
+      <div class="hero-buttons">
+        <button class="btn-warm" id="exploreWarmBtn">Explorar modelos <i class="fas fa-chevron-right"></i></button>
+        <button class="btn-outline-warm" id="videoTeaserBtn">Ver reel <i class="fas fa-play-circle"></i></button>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="polaroid-frame">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="https://videos.pexels.com/video-files/855727/855727-hd_1920_1080_30fps.mp4" type="video/mp4">
+          Tu navegador no soporta video.
+        </video>
+        <div class="polaroid-caption">iPhone 17 Pro · Inspiración vintage</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de productos (iPhone 14,15,16,17) con cards cálidas -->
+  <section id="products" class="products-warm">
+    <div class="section-header-warm">
+      <span class="section-eyebrow">Catálogo retro-futurista</span>
+      <h2>Elige tu <span class="warm-accent">compañero eterno</span></h2>
+      <div class="warm-divider"></div>
+    </div>
+    <div class="products-grid-warm" id="productsGridWarm">
+      <!-- Los productos se inyectan dinámicamente desde JS -->
+    </div>
+  </section>
+
+  <!-- Sección de especificaciones comparativas (vintage pero moderno) -->
+  <section id="specs" class="specs-warm">
+    <div class="section-header-warm">
+      <span class="section-eyebrow">Poder analógico · Alma digital</span>
+      <h2>Ficha técnica <span class="warm-accent">detallada</span></h2>
+    </div>
+    <div class="specs-table-container">
+      <table class="specs-table">
+        <thead>
+          <tr><th>Modelo</th><th>Pantalla</th><th>Procesador</th><th>Cámara</th><th>Batería</th></tr>
+        </thead>
+        <tbody id="specsTableBody">
+          <!-- JS llena dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Sección de contacto y whatsapp directo -->
+  <section id="contact" class="contact-warm">
+    <div class="contact-card-warm">
+      <div class="contact-info-warm">
+        <i class="fas fa-envelope-open-text"></i>
+        <h3>¿Listo para adquirir un clásico moderno?</h3>
+        <p>Escríbenos por WhatsApp y te asesoramos con entrega y garantía.</p>
+        <a href="https://wa.me/573001234567?text=Hola%20quiero%20comprar%20un%20iPhone%20vintage%20moderno" 
+           target="_blank" class="whatsapp-btn-warm" id="whatsappMainBtn">
+          <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+        </a>
+      </div>
+      <div class="contact-img">
+        <img src="https://i.ibb.co/4T0MqH5/apple-retro-collage.png" alt="Collage vintage apple" style="max-width: 180px; border-radius: 24px;">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-warm">
+    <p>© 2026 Vintage Cellar — Celebrando la evolución del iPhone (14 al 17). Diseño cálido con esencia retro.</p>
+  </footer>
+
+  <!-- Modal de video rápido (opcional) -->
+  <div id="videoModal" class="modal-vintage">
+    <div class="modal-vintage-content">
+      <span class="close-video">&times;</span>
+      <video controls autoplay id="modalVideoPlayer" style="width:100%; border-radius: 32px;">
+        <source src="https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_30fps.mp4" type="video/mp4">
+      </video>
+      <p>Vibra vintage, tecnología de punta</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
