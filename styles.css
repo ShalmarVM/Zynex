@@ -1,0 +1,589 @@
+/* ============================================
+   ZYNEX - AZUL OSCURO/NEGRO CON DETALLES PLATEADOS
+   Todos los iPhone 14 · 15 · 16 · 17
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #050B14;
+    color: #E8F0FF;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* Gradiente de fondo oscuro */
+.bg-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at 30% 40%, #0A1628 0%, #02050A 100%);
+    z-index: -2;
+}
+
+/* Partículas flotantes */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* ========== NAVEGACIÓN ========== */
+.zynex-nav {
+    background: rgba(5, 11, 20, 0.9);
+    backdrop-filter: blur(16px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 6%;
+    position: sticky;
+    top: 20px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 80px;
+    z-index: 100;
+    border: 1px solid rgba(192, 192, 192, 0.25);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.zynex-nav.scrolled {
+    top: 10px;
+    width: 95%;
+    background: rgba(3, 8, 18, 0.95);
+    border-color: rgba(0, 160, 255, 0.4);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: -0.5px;
+}
+
+.logo i {
+    font-size: 2rem;
+    color: #C0C0C0;
+    text-shadow: 0 0 6px #00aaff;
+}
+
+.logo span {
+    background: linear-gradient(135deg, #FFFFFF, #A0B8D0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #D0E2FF;
+    transition: 0.2s;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #C0C0C0, #00aaff);
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #00e0ff;
+    text-shadow: 0 0 4px cyan;
+}
+
+.zynex-icon {
+    background: rgba(192, 192, 192, 0.1);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    border: 1px solid rgba(192, 192, 192, 0.3);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.zynex-icon:hover {
+    background: rgba(192, 192, 192, 0.2);
+    border-color: #C0C0C0;
+}
+
+/* ========== HERO ========== */
+.hero-zynex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6%;
+    gap: 3rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-badge {
+    background: rgba(0, 160, 255, 0.15);
+    backdrop-filter: blur(4px);
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    border: 1px solid #5F7FBF;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.hero-zynex h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.grad-silver {
+    background: linear-gradient(120deg, #FFFFFF, #8BB0E0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    max-width: 500px;
+    opacity: 0.85;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-silver {
+    background: linear-gradient(90deg, #1A2A4F, #0F1A35);
+    border: 1px solid #6B8FCC;
+    padding: 0.9rem 2rem;
+    border-radius: 60px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0 0 12px rgba(0, 160, 255, 0.15);
+}
+
+.btn-silver:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 160, 255, 0.3);
+    border-color: #C0C0C0;
+}
+
+.btn-outline-silver {
+    background: transparent;
+    border: 1px solid #7F9FCF;
+    color: #C0E0FF;
+}
+
+.btn-outline-silver:hover {
+    background: rgba(192, 192, 192, 0.08);
+}
+
+.hero-image img {
+    width: 280px;
+    filter: drop-shadow(0 0 25px rgba(0, 150, 255, 0.3));
+    animation: floatSilver 3s infinite alternate;
+}
+
+@keyframes floatSilver {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-15px); }
+}
+
+/* ========== PRODUCTOS ========== */
+.products-zynex {
+    padding: 5rem 6%;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title span {
+    color: #8BB0E0;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.section-title h2 {
+    font-size: 2.8rem;
+    margin-top: 0.5rem;
+}
+
+.silver-line {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #5F9FFF, #C0C0C0);
+    margin: 1rem auto;
+    border-radius: 3px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: rgba(8, 16, 32, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 36px;
+    border: 1px solid rgba(176, 196, 222, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    border-color: #8BB0E0;
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.6);
+}
+
+.product-media {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: 0.2s;
+}
+
+.product-media img {
+    width: 170px;
+    transition: 0.2s;
+    filter: drop-shadow(0 5px 12px rgba(0, 0, 0, 0.4));
+}
+
+.product-media .video-overlay {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 30px;
+    padding: 5px 12px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #C0C0C0;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.product-badge {
+    background: linear-gradient(135deg, #1E2F50, #0F1A35);
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1px solid #4A6A9A;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #CCE4FF;
+    margin: 0.5rem 0;
+}
+
+.specs-mini {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.whatsapp-btn-card {
+    background: #25D366;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: #0A1128;
+    margin-top: 0.5rem;
+}
+
+.whatsapp-btn-card:hover {
+    background: #128C7E;
+    transform: scale(1.02);
+    color: white;
+}
+
+/* ========== TABLA ESPECIFICACIONES ========== */
+.specs-section {
+    padding: 4rem 6%;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.specs-table-container {
+    overflow-x: auto;
+    background: rgba(5, 12, 22, 0.6);
+    border-radius: 32px;
+    backdrop-filter: blur(4px);
+    border: 1px solid #2A3E66;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.specs-table th {
+    background: linear-gradient(135deg, #0F1F3A, #0A1530);
+    padding: 1rem;
+    color: #C0D8FF;
+    font-weight: 600;
+    border-bottom: 2px solid #3A5A8A;
+}
+
+.specs-table td {
+    padding: 0.9rem;
+    text-align: center;
+    border-bottom: 1px solid #2A3E66;
+    color: #D0E4FF;
+}
+
+.specs-table tr:hover td {
+    background: rgba(0, 160, 255, 0.08);
+}
+
+/* ========== CONTACTO ========== */
+.contact-zynex {
+    padding: 4rem 6%;
+    position: relative;
+    z-index: 2;
+}
+
+.glass-contact {
+    background: rgba(8, 16, 32, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    border: 1px solid #5F7FBF;
+}
+
+.glass-contact div:first-child {
+    flex: 2;
+}
+
+.glass-contact i.fa-satellite-dish {
+    font-size: 2rem;
+    color: #C0C0C0;
+}
+
+.glass-contact h3 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.whatsapp-large {
+    background: #25D366;
+    padding: 1rem 2rem;
+    border-radius: 60px;
+    text-decoration: none;
+    color: #0A1128;
+    font-weight: bold;
+    display: inline-flex;
+    gap: 12px;
+    transition: 0.2s;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-large:hover {
+    background: #128C7E;
+    transform: scale(1.02);
+    color: white;
+}
+
+.contact-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.contact-badge i {
+    font-size: 2.5rem;
+    color: #C0C0C0;
+}
+
+/* ========== MODAL VIDEO ========== */
+.modal-future {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content-future {
+    background: linear-gradient(145deg, #0A1430, #050A18);
+    border-radius: 48px;
+    max-width: 750px;
+    width: 90%;
+    padding: 1rem;
+    border: 1px solid #C0C0C0;
+    box-shadow: 0 0 50px rgba(0, 160, 255, 0.2);
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #C0C0C0;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+.close-modal:hover {
+    color: white;
+}
+
+.video-caption {
+    margin-top: 12px;
+    text-align: center;
+    color: #A0B8D0;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #2F4172;
+    position: relative;
+    z-index: 2;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+    .zynex-nav {
+        width: 95%;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero-zynex h1 {
+        font-size: 2.5rem;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+    }
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    .glass-contact {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image img {
+        width: 220px;
+    }
+    .product-media img {
+        width: 140px;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050B14;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #C0C0C0, #4A6A9A);
+    border-radius: 10px;
+}
